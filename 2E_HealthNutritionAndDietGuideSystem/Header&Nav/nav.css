@@ -1,0 +1,132 @@
+:root {
+  --primary: #56AB2F;
+  --secondary: #7CC576;
+  --success: #8cc152;
+  --danger: #e9573f;
+  --light: #f5f9f6;
+  --dark: #333;
+}
+
+.main-header {
+  background: var(--secondary);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hamburger {
+  color: black;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger:hover {
+  color: white;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-nav .nav-link,
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-nav .nav-link:hover,
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--primary);
+}
+
+.nav-links li a.active {
+  background-color: var(--primary);
+  color: white !important;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--menu-bg, white);
+    align-items: stretch;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 50%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none; /* Remove line after last item */
+  }
+
+  .nav-links li a.active {
+    background-color: var(--primary);
+    color: white !important;
+    font-size: 1.05rem;
+    padding: 12px 16px;
+    border-left: 4px solid white;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

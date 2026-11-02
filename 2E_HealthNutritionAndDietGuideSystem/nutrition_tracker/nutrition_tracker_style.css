@@ -1,0 +1,183 @@
+:root {
+  --primary: #56AB2F;
+  --secondary: #7CC576;
+  --success: #8cc152;
+  --danger: #e9573f;
+  --light: #f5f9f6;
+  --dark: #333;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.welcome {
+  font-weight: bold;
+}
+
+.meal {
+  text-align: center;
+  padding: 20px;
+  color: #56AB2F;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+form input,
+form button {
+  margin: 5px;
+  padding: 10px;
+  width: calc(100% - 16px);
+  max-width: 300px;
+  border: 1px solid #cce5cc;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #4a9e2f;
+}
+
+.breakdown-item {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.breakdown-item label {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+}
+
+.breakdown-item progress {
+  width: 60%;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.breakdown-item span {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#log-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.meal-entry {
+  margin: 5px 0;
+}
+
+.meal-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #D6EAD2;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.meal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 90%;
+  text-align: left;
+}
+
+.meal-info span {
+  display: block;
+  font-size: 0.95em;
+}
+
+.delete-meal {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+}
+
+#progressChart {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #555;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }

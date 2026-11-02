@@ -1,0 +1,199 @@
+:root {
+  --primary: #56AB2F;
+  --secondary: #7CC576;
+  --success: #8cc152;
+  --danger: #e9573f;
+  --light: #f5f9f6;
+  --dark: #333;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.welcome {
+  font-weight: bold;
+}
+
+.profile-container {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.profile-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Field Groups */
+.field-group {
+  padding-left: 10px;
+  padding-right: 100px;
+  margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.field-group label {
+  display: block;
+  color: #7CC576;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.field-group span {
+  font-size: 1rem;
+  color: #333;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #5AC8FA;
+  transition: transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  transform: scale(1.15);
+}
+
+.edit-form {
+  display: none;
+  margin-top: 10px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.edit-form button {
+  padding: 10px 16px;
+  background: #7CC576;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-form button:hover {
+  background: #6ab163;
+}
+
+/* Change Password Link */
+.change-password-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.change-password-link {
+  display: inline-block;
+  color: #5AC8FA;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.change-password-link:hover {
+  color: #3ea6d9;
+}
+
+/* Logout Button */
+.logout-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-logout {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e04f5f;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-logout:hover {
+  background: #c33c4c;
+}
+
+.success-message {
+  background: #e0f8e0;
+  color: #2e7d32;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-message {
+  background: #fde0e0;
+  color: #c62828;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #555;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }

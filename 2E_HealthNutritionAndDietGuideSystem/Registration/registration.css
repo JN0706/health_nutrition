@@ -1,0 +1,106 @@
+:root {
+  --primary: #56AB2F;
+  --secondary: #7CC576;
+  --success: #8cc152;
+  --danger: #e9573f;
+  --light: #f5f9f6;
+  --dark: #333;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Registration Container */
+.registration-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 30px;
+}
+
+.registration-container h2 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Form Styles */
+.registration-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-container input {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.registration-container button {
+  margin-top: 15px;
+  padding: 12px;
+  background: #7CC576;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.registration-container button:hover {
+  background: #6ab163;
+}
+
+/* Extra Links */
+.registration-container p {
+  margin-top: 20px;
+  font-size: 0.95em;
+}
+
+.registration-container a {
+  color: #5AC8FA;
+  text-decoration: none;
+}
+
+.page-wrapper {
+  display: flex;
+  flex: 1;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #555;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+}
